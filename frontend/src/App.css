@@ -1,0 +1,5 @@
+@font-face {
+  font-family: "TheyPerished";   /*Can be any text*/
+  src: local("TheyPerished"),
+    url("./fonts/TheyPerished.ttf") format("truetype");
+}
