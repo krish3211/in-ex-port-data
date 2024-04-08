@@ -1,0 +1,21 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "8286:80"
+    networks:
+      - inventory-network
+    depends_on:
+      - backend
+  backend:
+    build:
+      context: ./Backend
+    ports:
+      - "8287:5000"
+    networks:
+      - inventory-network
+networks:
+  inventory-network:
+    driver: bridge
