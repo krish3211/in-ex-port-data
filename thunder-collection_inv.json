@@ -1,0 +1,406 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "inv",
+    "collectionId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+    "dateExported": "2024-04-21T18:10:15.870Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "fbb6b07e-9872-48e5-bad3-41e19f2d49b7",
+            "name": "auth",
+            "containerId": "",
+            "created": "2024-04-20T04:43:07.522Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "f72fca97-45a0-429c-ac43-8b917f3e5cd9",
+            "name": "stocks",
+            "containerId": "",
+            "created": "2024-04-21T07:23:29.436Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "8ceeb980-7e6c-4438-bbd3-be23beb3771c",
+            "name": "purchase",
+            "containerId": "",
+            "created": "2024-04-21T10:51:06.829Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "2a1fca1b-460a-421f-9d48-2200c49b7cf5",
+            "name": "user request",
+            "containerId": "",
+            "created": "2024-04-21T13:09:19.399Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "05f4630e-5183-45cf-ae3c-73c48bc5dc22",
+            "name": "usestocks",
+            "containerId": "",
+            "created": "2024-04-21T14:54:26.635Z",
+            "sortNum": 60000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "0f51ed3e-630a-4889-88be-466ceecc43e6",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "fbb6b07e-9872-48e5-bad3-41e19f2d49b7",
+            "name": "signup",
+            "url": "http://localhost:5000/api/auth/createcredentials",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-20T04:43:31.205Z",
+            "modified": "2024-04-21T13:24:56.566Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"user\",\n  \"password\": \"user\",\n  \"role\": \"user\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "fb3ba213-d7d0-488e-9656-616410ea3612",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "fbb6b07e-9872-48e5-bad3-41e19f2d49b7",
+            "name": "login",
+            "url": "http://localhost:5000/api/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-04-20T04:43:37.083Z",
+            "modified": "2024-04-21T14:35:41.087Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"admin\",\n  \"password\":\"admin\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "fd224ca5-1610-4644-80ec-01a91de189db",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "fbb6b07e-9872-48e5-bad3-41e19f2d49b7",
+            "name": "delete user",
+            "url": "http://localhost:5000/api/auth/dprofile/662348e4a2bdf049dfc71282",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-04-20T04:43:56.277Z",
+            "modified": "2024-04-20T05:08:21.268Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyMzQ4Y2JhMmJkZjA0OWRmYzcxMjdmIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3MTM1ODg2NTl9.C_2xtR0R5ZbO6FL8bhz_BPDM2JgxQMCRHSzycWHBedU"
+                }
+            ]
+        },
+        {
+            "_id": "7633fef5-000e-4df1-84e0-91f56386dfdb",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "fbb6b07e-9872-48e5-bad3-41e19f2d49b7",
+            "name": "update user",
+            "url": "http://localhost:5000/api/auth/uprofile/662348e4a2bdf049dfc71282",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-04-20T04:44:08.935Z",
+            "modified": "2024-04-20T05:06:40.596Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyMzQ4Y2JhMmJkZjA0OWRmYzcxMjdmIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3MTM1ODg2NTl9.C_2xtR0R5ZbO6FL8bhz_BPDM2JgxQMCRHSzycWHBedU"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"role\":\"user\",\n  \"password\":\"user\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c4fcaf80-c8f3-48c5-94b1-139224c96e87",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "fbb6b07e-9872-48e5-bad3-41e19f2d49b7",
+            "name": "all users",
+            "url": "http://localhost:5000/api/auth/getalluser",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-04-20T04:44:18.614Z",
+            "modified": "2024-04-20T05:02:46.213Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyMzQ4Y2JhMmJkZjA0OWRmYzcxMjdmIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3MTM1ODg2NTl9.C_2xtR0R5ZbO6FL8bhz_BPDM2JgxQMCRHSzycWHBedU"
+                }
+            ]
+        },
+        {
+            "_id": "957091e1-4f78-4e45-ae1e-1601361de244",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "fbb6b07e-9872-48e5-bad3-41e19f2d49b7",
+            "name": "user",
+            "url": "http://localhost:5000/api/auth/getuser",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-04-20T04:44:27.058Z",
+            "modified": "2024-04-20T04:51:41.834Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyMzQ4Y2JhMmJkZjA0OWRmYzcxMjdmIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3MTM1ODg2NTl9.C_2xtR0R5ZbO6FL8bhz_BPDM2JgxQMCRHSzycWHBedU"
+                }
+            ]
+        },
+        {
+            "_id": "c245ecd1-2139-4ffd-8671-ef771e8a3acb",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "f72fca97-45a0-429c-ac43-8b917f3e5cd9",
+            "name": "adding",
+            "url": "http://localhost:5000/api/stock/generate",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-04-21T07:23:41.037Z",
+            "modified": "2024-04-21T18:08:16.474Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyMzQ4Y2JhMmJkZjA0OWRmYzcxMjdmIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3MTM1ODg2NTl9.C_2xtR0R5ZbO6FL8bhz_BPDM2JgxQMCRHSzycWHBedU"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"White & Red 5 mm\",\n  \"location\":\"O1-B1\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "25a9452c-07f5-4ac4-8714-171646448175",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "f72fca97-45a0-429c-ac43-8b917f3e5cd9",
+            "name": "getall",
+            "url": "http://localhost:5000/api/stock/getall",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-04-21T07:59:22.931Z",
+            "modified": "2024-04-21T08:07:37.367Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ]
+        },
+        {
+            "_id": "495416ea-21e9-456b-b904-9fcaa488749f",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "8ceeb980-7e6c-4438-bbd3-be23beb3771c",
+            "name": "add",
+            "url": "http://localhost:5000/api/store/purchase/add",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-04-21T10:51:13.590Z",
+            "modified": "2024-04-21T11:58:58.163Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyMzQ4Y2JhMmJkZjA0OWRmYzcxMjdmIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3MTM1ODg2NTl9.C_2xtR0R5ZbO6FL8bhz_BPDM2JgxQMCRHSzycWHBedU"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"sku\": \"0001\",\n  \"quantity\": 20,\n  \"purchase_date\": \"29/04/2024\",\n  \"price\": 120,\n  \"store_name\": \"Bhai\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "500ebb84-e15a-47cc-81c9-109eed70bc10",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "8ceeb980-7e6c-4438-bbd3-be23beb3771c",
+            "name": "getall",
+            "url": "http://localhost:5000/api/store/purchase/getall",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-04-21T11:38:07.826Z",
+            "modified": "2024-04-21T11:38:45.501Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyMzQ4Y2JhMmJkZjA0OWRmYzcxMjdmIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3MTM1ODg2NTl9.C_2xtR0R5ZbO6FL8bhz_BPDM2JgxQMCRHSzycWHBedU"
+                }
+            ]
+        },
+        {
+            "_id": "572df9d6-2bf3-42ce-ab41-3fbfe1b4b5e0",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "8ceeb980-7e6c-4438-bbd3-be23beb3771c",
+            "name": "delete",
+            "url": "http://localhost:5000/api/store/purchase/delete/6624faeb151b7fd737d78d22",
+            "method": "DELETE",
+            "sortNum": 120000,
+            "created": "2024-04-21T11:42:54.638Z",
+            "modified": "2024-04-21T11:57:57.402Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyMzQ4Y2JhMmJkZjA0OWRmYzcxMjdmIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3MTM3MDA2NTV9.P45DvRTwJtldlFRrNfTDxoWsZzoEK9F6oJZljprTX7U"
+                }
+            ]
+        },
+        {
+            "_id": "f4f0fdc7-b0d4-4184-842e-e9955b892f49",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "2a1fca1b-460a-421f-9d48-2200c49b7cf5",
+            "name": "request to admin",
+            "url": "http://localhost:5000/api/ticket/request",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2024-04-21T13:09:50.959Z",
+            "modified": "2024-04-21T13:30:25.342Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyNTEzYTgxYjdiNWY0NDIxZDc3ZmE0IiwidXNlcm5hbWUiOiJ1c2VyIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNzEzNzA1OTI2fQ.swUCmalP7P9uRQg5ZOqm-CokA1IT6_10FKPi9V7i0zY"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"subject\": \"Buy a new AC for scrc lab\",\n  \"body\": \"Due to summar we want AC for refreshment.\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "8bc06e0f-e7c4-4dd6-ab50-612a3331dadf",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "2a1fca1b-460a-421f-9d48-2200c49b7cf5",
+            "name": "getall by admin and user",
+            "url": "http://localhost:5000/api/ticket/getall",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2024-04-21T13:53:56.698Z",
+            "modified": "2024-04-21T14:06:30.767Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyNTEzYTgxYjdiNWY0NDIxZDc3ZmE0IiwidXNlcm5hbWUiOiJ1c2VyIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNzEzNzA1OTI2fQ.swUCmalP7P9uRQg5ZOqm-CokA1IT6_10FKPi9V7i0zY"
+                }
+            ]
+        },
+        {
+            "_id": "2cfc1d55-269d-43b1-8382-d19233e0854c",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "2a1fca1b-460a-421f-9d48-2200c49b7cf5",
+            "name": "update request",
+            "url": "http://localhost:5000/api/ticket/update/662514921b7b5f4421d77fa7",
+            "method": "PUT",
+            "sortNum": 150000,
+            "created": "2024-04-21T14:19:47.722Z",
+            "modified": "2024-04-21T14:35:56.004Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyMzQ4Y2JhMmJkZjA0OWRmYzcxMjdmIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3MTM3MTAxNDF9.RIha3rRLIafuIbT7WfrXZvL_Tm3MvJ7QclKIN06rSZU"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"status\":\"Approved\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "eef66ee4-4ca1-4918-8d88-2a083ddb11a1",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "05f4630e-5183-45cf-ae3c-73c48bc5dc22",
+            "name": "getall",
+            "url": "http://localhost:5000/api/store/use/getall",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2024-04-21T14:54:35.440Z",
+            "modified": "2024-04-21T17:12:07.609Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyMzQ4Y2JhMmJkZjA0OWRmYzcxMjdmIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3MTM3MTAxNDF9.RIha3rRLIafuIbT7WfrXZvL_Tm3MvJ7QclKIN06rSZU"
+                }
+            ]
+        },
+        {
+            "_id": "cdbe7f15-76e9-4754-8e58-d48064e663c5",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "05f4630e-5183-45cf-ae3c-73c48bc5dc22",
+            "name": "Create",
+            "url": "http://localhost:5000/api/store/use/create",
+            "method": "POST",
+            "sortNum": 170000,
+            "created": "2024-04-21T14:54:46.064Z",
+            "modified": "2024-04-21T17:12:48.704Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyNTEzYTgxYjdiNWY0NDIxZDc3ZmE0IiwidXNlcm5hbWUiOiJ1c2VyIiwicm9sZSI6InVzZXIifSwiaWF0IjoxNzEzNzA1OTI2fQ.swUCmalP7P9uRQg5ZOqm-CokA1IT6_10FKPi9V7i0zY"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"sku\": \"0001\",\n  \"purpose\": \"for lab\",\n  \"usedQuantity\": 20\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "ce6d053b-0bc3-4dd6-949c-3b3519f17a8c",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "05f4630e-5183-45cf-ae3c-73c48bc5dc22",
+            "name": "update",
+            "url": "http://localhost:5000/api/store/use/update/662552a206baca906b4096c5",
+            "method": "PUT",
+            "sortNum": 180000,
+            "created": "2024-04-21T17:27:52.327Z",
+            "modified": "2024-04-21T17:54:14.664Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyMzQ4Y2JhMmJkZjA0OWRmYzcxMjdmIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3MTM3MTAxNDF9.RIha3rRLIafuIbT7WfrXZvL_Tm3MvJ7QclKIN06rSZU"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"status\":\"Approved\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b43723b1-3952-4598-ae49-ee9e1ec9cc57",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "05f4630e-5183-45cf-ae3c-73c48bc5dc22",
+            "name": "delete",
+            "url": "http://localhost:5000/api/store/use/delete/662552a206baca906b4096c5",
+            "method": "DELETE",
+            "sortNum": 190000,
+            "created": "2024-04-21T17:49:36.542Z",
+            "modified": "2024-04-21T17:54:32.235Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjYyMzQ4Y2JhMmJkZjA0OWRmYzcxMjdmIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9LCJpYXQiOjE3MTM3MTAxNDF9.RIha3rRLIafuIbT7WfrXZvL_Tm3MvJ7QclKIN06rSZU"
+                }
+            ]
+        },
+        {
+            "_id": "961a83d3-8cfd-4a7b-9651-fd6bec92a4df",
+            "colId": "818cedd0-13c8-4196-a87c-4820bb1780a1",
+            "containerId": "f72fca97-45a0-429c-ac43-8b917f3e5cd9",
+            "name": "count",
+            "url": "http://localhost:5000/api/stock/count",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2024-04-21T18:06:12.718Z",
+            "modified": "2024-04-21T18:06:27.764Z",
+            "headers": []
+        }
+    ],
+    "ref": "DZIKAmVhgdSrxTsO7TprikwZgOwNMd9hrqV7iWcJ8iIMaTJOBGaRctuIQNVeWAZbMdOarnxBjX_hpbVRSQ5gBw"
+}
